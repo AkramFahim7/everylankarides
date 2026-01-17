@@ -46,40 +46,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ==========================================
-// 4. About Section Counter Animation
+// 4. About Section Counter Animation (FIXED)
 // ==========================================
-const statsElements = document.querySelectorAll('.stat-item h3');
+
+// Select ONLY counters that should animate
+const statsElements = document.querySelectorAll(
+  '.stat-item h3:not(.no-counter)'
+);
+
 const animationSpeed = 200;
 
 const startCounter = () => {
-    statsElements.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target') || parseInt(counter.innerText);
-            const current = parseInt(counter.innerText);
-            const increment = target / animationSpeed;
+  statsElements.forEach(counter => {
 
-            if (current < target) {
-                counter.innerText = Math.ceil(current + increment) + '+';
-                setTimeout(updateCount, 1);
-            } else {
-                counter.innerText = target + '+';
-            }
-        };
-        updateCount();
-    });
+    // Read target safely
+    const targetAttr = counter.getAttribute('data-target');
+    const target = targetAttr ? parseInt(targetAttr, 10) : null;
+
+    // If no valid target, skip (extra safety)
+    if (!target || isNaN(target)) return;
+
+    let current = 0;
+
+    const updateCount = () => {
+      const increment = Math.ceil(target / animationSpeed);
+
+      if (current < target) {
+        current += increment;
+        if (current > target) current = target;
+
+        counter.innerText = current + '+';
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target + '+';
+      }
+    };
+
+    updateCount();
+  });
 };
 
-const aboutObserver = new IntersectionObserver((entries) => {
+// Observe About section
+const aboutObserver = new IntersectionObserver(
+  (entries) => {
     if (entries[0].isIntersecting) {
-        startCounter();
-        aboutObserver.disconnect();
+      startCounter();
+      aboutObserver.disconnect();
     }
-}, { threshold: 0.5 });
+  },
+  { threshold: 0.5 }
+);
 
+// Attach observer
 const statsSection = document.querySelector('.about-stats');
 if (statsSection) {
-    aboutObserver.observe(statsSection);
+  aboutObserver.observe(statsSection);
 }
+
 
 // ==========================================
 // 5. Integrated Booking Form Submission (Email + WhatsApp)

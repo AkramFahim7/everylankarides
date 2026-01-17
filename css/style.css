@@ -1061,3 +1061,155 @@ img {
   }
 }
 
+
+/* =========================
+   PRICING PAGE STYLES
+========================= */
+
+
+/* Add this to your existing style.css file */
+
+/* PRICING SECTION */
+.pricing-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.pricing-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing-badge {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 20px 0 10px;
+    line-height: 1.2;
+}
+
+.pricing-title span {
+    color: #0066cc;
+}
+
+.pricing-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.pricing-table-container {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-table thead {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+}
+
+.pricing-table th {
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.pricing-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.pricing-table td {
+    padding: 18px 20px;
+    text-align: left;
+    color: #333;
+    font-size: 14px;
+}
+
+.pricing-table td:nth-child(2),
+.pricing-table td:nth-child(3),
+.pricing-table td:nth-child(4) {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.pricing-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.pricing-note {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.pricing-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+}
+
+.pricing-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 102, 204, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 60px 15px;
+    }
+
+    .pricing-title {
+        font-size: 32px;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+
+    .pricing-table-container {
+        overflow-x: auto;
+    }
+}

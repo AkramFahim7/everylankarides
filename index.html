@@ -9,6 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <meta name="description"
+        content="Affordable van rental services in Sri Lanka. Chauffeur-driven vans, self-drive options, airport transfers, tours & events. Book now with Every Lanka Rides.">
+
+    <meta name="keywords"
+        content="van rental Sri Lanka, van hire Sri Lanka, chauffeur van Sri Lanka, airport van transfer, tourist van rental">
+
+    <meta name="author" content="Every Lanka Rides">
+
+    <meta name="robots" content="index, follow">
+
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -17,18 +28,36 @@
 
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+    </script>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+
 </head>
 
 <script>
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+
 
 
 <body>
@@ -51,6 +80,7 @@
             <a href="#services">Services</a>
             <a href="#fleet">Fleet</a>
             <a href="#contact">Contact</a>
+            <a href="pricing.html">Price</a>
         </nav>
     </header>
 
@@ -79,7 +109,7 @@
 
                 <div class="about-stats">
                     <div class="stat-item">
-                        <h3>500+</h3>
+                        <h3>100+</h3>
                         <p>Happy Customers</p>
                     </div>
                     <div class="stat-item">
@@ -90,6 +120,8 @@
                         <h3>24/7</h3>
                         <p>Support Available</p>
                     </div>
+
+
                 </div>
             </div>
 
@@ -151,18 +183,6 @@
 
         <div class="services-cards">
             <!-- Self-Drive Rentals -->
-            <div class="service-card" data-aos="zoom-in">
-                <div class="card-badge popular">Most Popular</div>
-                <div class="card-icon"><i class="fas fa-car"></i></div>
-                <h3>Self-Drive Rentals</h3>
-                <p>Take control of your journey with our well-maintained Suzuki Every vans</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Clean & sanitized vehicles</li>
-                    <li><i class="fas fa-check-circle"></i> GPS navigation included</li>
-                    <li><i class="fas fa-check-circle"></i> 24/7 roadside assistance</li>
-                    <li><i class="fas fa-check-circle"></i> Flexible rental periods</li>
-                </ul>
-            </div>
 
             <!-- Chauffeur-Driven Tours -->
             <div class="service-card" data-aos="zoom-in">
@@ -508,18 +528,6 @@
     </footer>
 
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-in-out'
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-    <script src="js/script.js" defer></script>
 
 </body>
 

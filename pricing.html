@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing | Every Lanka Rides</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="logo"><span>ELR</span>Every Lanka Rides</div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#fleet">Fleet</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- PRICING SECTION -->
+<section class="pricing-section" id="pricing">
+    <div class="pricing-wrapper">
+
+        <span class="pricing-badge">
+            <i class="fas fa-shield-alt"></i> Transparent Pricing
+        </span>
+
+        <h2 class="pricing-title">Van Hire from <span>Kandy</span></h2>
+        <p class="pricing-subtitle">
+            One-Day Round Trip / Drop – Small Van (Suzuki Every)
+        </p>
+
+        <div class="pricing-table-container">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Distance</th>
+                        <th>Rate (LKR)</th>
+                        <th>Rate (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nuwara Eliya</td><td>80 km</td><td>Rs 14,000–16,000</td><td>$45–$52</td></tr>
+                    <tr><td>Ambewela</td><td>90 km</td><td>Rs 15,000–17,000</td><td>$48–$55</td></tr>
+                    <tr><td>Ella</td><td>140 km</td><td>Rs 18,000–22,000</td><td>$58–$71</td></tr>
+                    <tr><td>Sigiriya</td><td>90 km</td><td>Rs 15,000–17,000</td><td>$48–$55</td></tr>
+                    <tr><td>Dambulla</td><td>75 km</td><td>Rs 14,000–16,000</td><td>$45–$52</td></tr>
+                    <tr><td>Nallatanniya (Adam's Peak)</td><td>90 km</td><td>Rs 14,000–16,000</td><td>$45–$52</td></tr>
+                    <tr><td>Katunayake (Airport)</td><td>115 km</td><td>Rs 16,000–18,000</td><td>$52–$58</td></tr>
+                    <tr><td>Colombo</td><td>120 km</td><td>Rs 17,000–19,000</td><td>$55–$61</td></tr>
+                    <tr><td>Galle</td><td>220 km</td><td>Rs 24,000–28,000</td><td>$77–$90</td></tr>
+                    <tr><td>Tangalle</td><td>250 km</td><td>Rs 26,000–30,000</td><td>$84–$97</td></tr>
+                    <tr><td>Kataragama</td><td>250 km</td><td>Rs 26,000–30,000</td><td>$84–$97</td></tr>
+                    <tr><td>Yala</td><td>230 km</td><td>Rs 25,000–28,000</td><td>$81–$90</td></tr>
+                    <tr><td>Anuradhapura</td><td>140 km</td><td>Rs 20,000–23,000</td><td>$65–$74</td></tr>
+                    <tr><td>Polonnaruwa</td><td>140 km</td><td>Rs 20,000–23,000</td><td>$65–$74</td></tr>
+                    <tr><td>Trincomalee</td><td>180 km</td><td>Rs 24,000–27,000</td><td>$77–$87</td></tr>
+                    <tr><td>Pasikuda</td><td>190 km</td><td>Rs 24,000–28,000</td><td>$77–$90</td></tr>
+                    <tr><td>Matale</td><td>30 km</td><td>Rs 9,000–11,000</td><td>$29–$36</td></tr>
+                    <tr><td>Riverston</td><td>55 km</td><td>Rs 13,000–15,000</td><td>$42–$48</td></tr>
+                    <tr><td>Pinnawala</td><td>40 km</td><td>Rs 10,000–12,000</td><td>$32–$39</td></tr>
+                    <tr><td>Horton Plains</td><td>100 km</td><td>Rs 16,000–18,000</td><td>$52–$58</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="pricing-note">
+            * Prices may vary based on route conditions and additional stops.
+        </p>
+
+        <a href="index.html#contact" class="pricing-btn">Get a Custom Quote</a>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-bottom">
+        <p>© 2026 Every Lanka Rides. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
